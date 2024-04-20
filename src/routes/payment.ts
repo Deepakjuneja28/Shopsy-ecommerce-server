@@ -14,7 +14,7 @@ const app = express.Router();
 app.post("/create", createPaymentIntent);
 
 // route - /api/v1/payment/coupon/new
-app.get("/discount", applyDiscount);
+app.get("/discount", adminOnly , applyDiscount);
 
 // route - /api/v1/payment/coupon/new
 app.get("/coupon/new", adminOnly, newCoupon);
